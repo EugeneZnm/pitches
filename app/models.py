@@ -23,6 +23,17 @@ class User(db.model):
     creating columns, with primary key set as true
     
     """
+    def __repr__(self):
+        """
+        repr method to make debugging easier
+        :return:
+        """
+        return f'User {self.username}'
 
 
+class Pitches(db.model):
+    """
+    creating class pitches for creating new pitches and categories
 
+    """
+    __tablename__ = "pitches"
