@@ -66,6 +66,8 @@ class Roles(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255))
     users = db.relationship('User', backref='role', lazy='dynamic')
+    upvote = db.relationship('Upvote', backref='role', lazy='dynamic')
+
     """
     creating relationship between users and pitches connecting with foreign key 
     
@@ -86,4 +88,16 @@ class Comments(db.Model):
     pitch_id = db.Column(db.Integer, db.ForeignKey, 'pitches.id')
     user_id = db.Column(db.Integer, db.ForeignKey, 'users.id')
 
+    def __repr__(self):
 
+        return f'User {self.saying}'
+
+
+class Upvote(db.model):
+    """
+    class to create upvote table
+
+    """
+    id = db.Column(db.Integer, primary_key =True)
+    vote = db.Column(db.Integer)
+    pitch_id = db.Column(db.Integer, db.ForeignKey, 'pitches.id')
