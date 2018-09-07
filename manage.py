@@ -17,3 +17,14 @@ manager.add_command('server', Server)
 migrate = Migrate(app, db)
 manager.add_command('db', MigrateCommand)
 
+# manager shell decorator to create shell context
+@manager.shell
+def make_shell_context():
+    """
+    shell context function allowing passing of properties into our shell
+    :return:
+    """
+    return dict(app=app, db=db, User=User, Roles=Roles, Pitches=Pitches, Comments=Comments, Upvote=Upvote, Downvote=Downvote)
+
+if __name__ == '__main__':
+    manager.run()
