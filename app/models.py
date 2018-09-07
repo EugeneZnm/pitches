@@ -14,6 +14,8 @@ class User(db.model):
     age = db.Columns(db.String(255))
     category = db.relationship('pitches', backref = True, lazy='dynamic')
     comment = db.relationship('pitches', backref = True, lazy='dynamic')
+    upvote = db.relationship('Upvote', backref='role', lazy='dynamic')
+    downvote = db.relationship('downvote', backref='role', lazy='dynamic')
 
     role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
     """
@@ -46,6 +48,8 @@ class Pitches(db.model):
     pitch = db.Column(db.String(290))
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     comment_id = db.relationship('Comment', backref='role', lazy='dynamic')
+    upvote = db.relationship('Upvote', backref='role', lazy='dynamic')
+    downvote = db.relationship('downvote', backref='role', lazy='dynamic')
 
     """
     using db relationship to create a virtual column connecting with the foreign key
@@ -66,7 +70,6 @@ class Roles(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255))
     users = db.relationship('User', backref='role', lazy='dynamic')
-    upvote = db.relationship('Upvote', backref='role', lazy='dynamic')
 
     """
     creating relationship between users and pitches connecting with foreign key 
@@ -101,3 +104,14 @@ class Upvote(db.model):
     id = db.Column(db.Integer, primary_key =True)
     vote = db.Column(db.Integer)
     pitch_id = db.Column(db.Integer, db.ForeignKey, 'pitches.id')
+    user_id = db.Column(db.Integer, db.ForeignKey, 'users.id')
+
+
+class Downvote(db.Model):
+    """
+    class downvote tp create downvote table
+    """
+    id = db.Column(db.Integer, primary_key = True)
+    downvote = db.Column(db.Integer)
+    pitch_id = db.Column(db.Integer, db.ForeignKey, 'pitches.id')
+    user_id = db.Column(db.Integer, db.ForeignKey, 'users.id')
