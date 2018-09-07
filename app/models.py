@@ -12,7 +12,9 @@ class User(db.model):
     username = db.Column(db.String(255), index=True)
     email = db.Column(db.String(255), unique=True, index=True)
     age = db.Columns(db.String(255))
-    pitch_id = db.Column(db.Integer, db.ForeignKey('pitches.id'))
+    category = db.relationship('pitches', backref = True, lazy='dynamic')
+    comment = db.relationship('pitches', backref = True, lazy='dynamic')
+
     role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
     """
     creating connection between roles and users using ForeignKey to reference primary key in roles.id
@@ -40,11 +42,11 @@ class Pitches(db.model):
     """
     __tablename__ = "pitches"
     id = db.Column(db.Integer, primary_Key=True)
-    promotion = db.Column(db.String(255))
-    pickup = db.Column(db.String(255))
-    business = db.Column(db.String(255))
-    motivational = db.Column(db.String(255))
-    users = db.relationship('User', backref='pitch', lazy='dynamic')
+    category = db.Column(db.String(255))
+    pitch = db.Column(db.String(290))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    comment_id = db.relationship('Comment', backref='role', lazy='dynamic')
+
     """
     using db relationship to create a virtual column connecting with the foreign key
     backref used to get the pitches specific to a user
@@ -62,7 +64,7 @@ class Roles(db.Model):
     """
     __tablname__ = 'roles'
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.Integer(255))
+    name = db.Column(db.String(255))
     users = db.relationship('User', backref='role', lazy='dynamic')
     """
     creating relationship between users and pitches connecting with foreign key 
@@ -71,4 +73,17 @@ class Roles(db.Model):
 
     def __repr__(self):
         return f'User {self.name}'
+
+
+class Comments(db.Model):
+    """
+    class Comments to create table for comments
+
+    """
+    __tableman__ = 'comments'
+    id = db.Column(db.Integer, primary_key = True)
+    saying = db.Column(db.String(267))
+    pitch_id = db.Column(db.Integer, db.ForeignKey, 'pitches.id')
+    user_id = db.Column(db.Integer, db.ForeignKey, 'users.id')
+
 
