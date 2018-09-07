@@ -7,12 +7,12 @@ class User(db.model):
     creating class user for creating new users and connecting it to database via db.Model
 
     """
-    __tablename__= 'users'
-    id = db.Column(db.Integer, primary_key = True)
-    username = db.Column(db.String(255), index = True)
-    email = db.Column(db.String(255), unique = True, index = True)
+    __tablename__ = 'users'
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(255), index=True)
+    email = db.Column(db.String(255), unique=True, index=True)
     age = db.Columns(db.String(255))
-    role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
+    pitch_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
     """
     creating connection between roles and users using ForeignKey to reference primary key in roles.id
     """
@@ -23,6 +23,7 @@ class User(db.model):
     creating columns, with primary key set as true
     
     """
+
     def __repr__(self):
         """
         repr method to make debugging easier
@@ -37,3 +38,19 @@ class Pitches(db.model):
 
     """
     __tablename__ = "pitches"
+    id = db.Column(db.Integer, primary_Key=True)
+    promotion = db.Column(db.String(255))
+    pickup = db.Column(db.String(255))
+    business = db.Column(db.String(255))
+    motivational = db.Column(db.String(255))
+    users = db.relationship('User', backref='pitch', lazy='dynamic')
+    """
+    using db relationship to create a virtual column connecting with the foreign key
+    backref used to get the pitches specific to a user
+    
+    """
+
+    def __repr__(self):
+        return f'User {self.promotion.pickup.business.motivational}'
+
+
