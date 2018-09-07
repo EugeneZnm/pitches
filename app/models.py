@@ -12,7 +12,8 @@ class User(db.model):
     username = db.Column(db.String(255), index=True)
     email = db.Column(db.String(255), unique=True, index=True)
     age = db.Columns(db.String(255))
-    pitch_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
+    pitch_id = db.Column(db.Integer, db.ForeignKey('pitches.id'))
+    role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
     """
     creating connection between roles and users using ForeignKey to reference primary key in roles.id
     """
@@ -53,4 +54,21 @@ class Pitches(db.model):
     def __repr__(self):
         return f'User {self.promotion.pickup.business.motivational}'
 
+
+class Roles(db.Model):
+    """
+    class roles to create user roles
+
+    """
+    __tablname__ = 'roles'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.Integer(255))
+    users = db.relationship('User', backref='role', lazy='dynamic')
+    """
+    creating relationship between users and pitches connecting with foreign key 
+    
+    """
+
+    def __repr__(self):
+        return f'User {self.name}'
 
