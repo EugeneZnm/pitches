@@ -1,8 +1,10 @@
 #  importing db
 from . import db
+# security model providing haching functionality
+from werkzeug.security import generate_password_hash,check_password_hash
 
 
-class User(db.model):
+class User(db.Model):
     """
     creating class user for creating new users and connecting it to database via db.Model
 
@@ -11,11 +13,11 @@ class User(db.model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(255), index=True)
     email = db.Column(db.String(255), unique=True, index=True)
-    age = db.Columns(db.String(255))
-    category = db.relationship('pitches', backref = True, lazy='dynamic')
-    comment = db.relationship('pitches', backref = True, lazy='dynamic')
-    upvote = db.relationship('Upvote', backref='role', lazy='dynamic')
-    downvote = db.relationship('downvote', backref='role', lazy='dynamic')
+    age = db.Column(db.String(255))
+    pitch = db.relationship('pitches', backref = 'user', lazy='dynamic')
+    comment = db.relationship('comment', backref = 'user', lazy='dynamic')
+    upvote = db.relationship('Upvote', backref='user', lazy='dynamic')
+    downvote = db.relationship('downvote', backref='user', lazy='dynamic')
 
     role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
     """
@@ -37,19 +39,19 @@ class User(db.model):
         return f'User {self.username}'
 
 
-class Pitches(db.model):
+class Pitches(db.Model):
     """
     creating class pitches for creating new pitches and categories
 
     """
     __tablename__ = "pitches"
-    id = db.Column(db.Integer, primary_Key=True)
+    id = db.Column(db.Integer, primary_key = True)
     category = db.Column(db.String(255))
     pitch = db.Column(db.String(290))
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    comment_id = db.relationship('Comment', backref='role', lazy='dynamic')
-    upvote = db.relationship('Upvote', backref='role', lazy='dynamic')
-    downvote = db.relationship('downvote', backref='role', lazy='dynamic')
+    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
+    comment_id = db.relationship('Comment', backref='pitches', lazy='dynamic')
+    upvote = db.relationship('Upvote', backref='pitches', lazy='dynamic')
+    downvote = db.relationship('downvote', backref='pitches', lazy='dynamic')
 
     """
     using db relationship to create a virtual column connecting with the foreign key
@@ -85,26 +87,26 @@ class Comments(db.Model):
     class Comments to create table for comments
 
     """
-    __tableman__ = 'comments'
+    __tablename__ = 'comments'
     id = db.Column(db.Integer, primary_key = True)
     saying = db.Column(db.String(267))
-    pitch_id = db.Column(db.Integer, db.ForeignKey, 'pitches.id')
-    user_id = db.Column(db.Integer, db.ForeignKey, 'users.id')
+    pitch_id = db.Column(db.Integer, db.ForeignKey('pitches.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
     def __repr__(self):
 
         return f'User {self.saying}'
 
 
-class Upvote(db.model):
+class Upvote(db.Model):
     """
     class to create upvote table
 
     """
     id = db.Column(db.Integer, primary_key =True)
     vote = db.Column(db.Integer)
-    pitch_id = db.Column(db.Integer, db.ForeignKey, 'pitches.id')
-    user_id = db.Column(db.Integer, db.ForeignKey, 'users.id')
+    pitch_id = db.Column(db.Integer, db.ForeignKey('pitches.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
 
 class Downvote(db.Model):
@@ -113,5 +115,5 @@ class Downvote(db.Model):
     """
     id = db.Column(db.Integer, primary_key = True)
     downvote = db.Column(db.Integer)
-    pitch_id = db.Column(db.Integer, db.ForeignKey, 'pitches.id')
-    user_id = db.Column(db.Integer, db.ForeignKey, 'users.id')
+    pitch_id = db.Column(db.Integer, db.ForeignKey('pitches.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
