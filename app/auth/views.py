@@ -1,6 +1,6 @@
 from flask import render_template, url_for, redirect, request, flash
 from . import auth
-from flask_login import login_user
+from flask_login import login_user, login_required, logout_user
 # imoort user model
 from ..models import User
 from ..forms import RegistrationForm, LoginForm
@@ -48,3 +48,14 @@ def register():
         return redirect(url_for('auth.login'))
     return render_template('auth/register.html', registration_form = form)
 
+
+# logout route to logout user from application
+@auth.route('/logout')
+@login_required
+def logout():
+    """
+    function to logout user
+    :return:
+    """
+    logout_user()
+    return redirect(url_for("main.index"))
