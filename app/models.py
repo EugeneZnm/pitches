@@ -41,6 +41,11 @@ class User(db.Model):
         self.pass_secure = generate_password_hash(password)
 
     def verify_password(self, password):
+        """
+        method to verify password
+        :param password:
+        :return:
+        """
         return check_password_hash(password)
 
     def __repr__(self):
