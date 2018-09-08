@@ -50,3 +50,4 @@ class LoginForm(FlaskForm):
     password = PasswordField('Password', validators=[Required()])
     remember = BooleanField('Remember me') # render checkbox to remember password details
     submit = SubmitField('Log In')
+
