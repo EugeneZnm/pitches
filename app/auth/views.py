@@ -1,7 +1,7 @@
 from flask import render_template
 from . import auth
 
-
+# view function
 @auth.route('/login')
 def login():
     """
