@@ -3,8 +3,14 @@ from . import db
 # security model providing haching functionality
 from werkzeug.security import generate_password_hash,check_password_hash
 
+# import class UserMixin
+from flask_login import UserMixin
 
-class User(db.Model):
+# import login manager
+from . import login_manager
+
+
+class User(UserMixin, db.Model):
     """
     creating class user for creating new users and connecting it to database via db.Model
 
@@ -30,6 +36,10 @@ class User(db.Model):
     creating columns, with primary key set as true
     
     """
+    @login_manager.user_loader # modifies load_user function passing in a user_id to query the database and get a user with IID
+    def load_user(user_id):
+        return User.query.get(int(user_id))
+
     pass_secure = db.Column(db.String(255))
 
     @property
