@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
 
 # inportation of input fields from
-from wtforms import StringField, PasswordField, SubmitField, IntegerField
+from wtforms import StringField, PasswordField, SubmitField, IntegerField, BooleanField
 
 # importation of validators
 from wtforms.validators import Required, Email, EqualTo
@@ -40,3 +40,13 @@ class RegistrationForm(FlaskForm):
         """
         if User.query.filter_by(username=data_field.data).first():
             raise ValidationError('Username is already Taken, try another one')
+
+
+class LoginForm(FlaskForm):
+    """
+    login form class to create login form
+    """
+    email = StringField('Email Address Here', validators=[Required(), Email()])
+    password = PasswordField('Password', validators=[Required()])
+    remember = BooleanField('Remember me') # render checkbox to remember password details
+    submit = SubmitField('Log In')
