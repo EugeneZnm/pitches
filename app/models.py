@@ -36,6 +36,8 @@ class User(UserMixin, db.Model):
     creating columns, with primary key set as true
     
     """
+
+    # call back function retieving user id when unique identifier is passed
     @login_manager.user_loader # modifies load_user function passing in a user_id to query the database and get a user with IID
     def load_user(user_id):
         return User.query.get(int(user_id))
