@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d7836bd-e796-48ce-a11b-694f598be842" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/auth/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/auth/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/auth/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,14 +39,14 @@
         <counts>
           <entry key="html" value="357" />
           <entry key="procfile" value="1" />
-          <entry key="py" value="9148" />
+          <entry key="py" value="9934" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="357" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="9148" />
+          <entry key="Python" value="9934" />
         </counts>
       </usages-collector>
     </session>
@@ -83,16 +82,16 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/auth/forms.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="659">
-                  <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+                <state relative-caret-position="689">
+                  <caret line="53" selection-start-line="53" selection-end-line="53" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
-                    <marker date="1536447978095" expanded="true" signature="454:536" ph="..." />
-                    <marker date="1536447978095" expanded="true" signature="895:904" ph="..." />
-                    <marker date="1536447978095" expanded="true" signature="1488:1493" ph="..." />
+                    <marker date="1536448351255" expanded="true" signature="454:536" ph="..." />
+                    <marker date="1536448351255" expanded="true" signature="895:904" ph="..." />
+                    <marker date="1536448351255" expanded="true" signature="1488:1493" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -129,15 +128,15 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/auth/views.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="345">
-                  <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+                  <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
                   <folding>
-                    <element signature="e#0#51#0" expanded="true" />
-                    <marker date="1536447088517" expanded="true" signature="297:302" ph="..." />
-                    <marker date="1536447088517" expanded="true" signature="480:485" ph="..." />
+                    <element signature="e#0#68#0" expanded="true" />
+                    <marker date="1536449304199" expanded="true" signature="1018:1023" ph="..." />
+                    <marker date="1536449304199" expanded="true" signature="1226:1231" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -271,9 +270,9 @@
         <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$PROJECT_DIR$/app/auth/__init__.py" />
         <option value="$PROJECT_DIR$/app/main/views.py" />
-        <option value="$PROJECT_DIR$/app/auth/views.py" />
         <option value="$PROJECT_DIR$/app/templates/auth/register.html" />
         <option value="$PROJECT_DIR$/app/auth/forms.py" />
+        <option value="$PROJECT_DIR$/app/auth/views.py" />
       </list>
     </option>
   </component>
@@ -369,9 +368,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="-4" width="1920" height="1084" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.06990395" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.06990395" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -382,7 +380,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3275862" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49924242" visible="true" weight="0.16213389" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49924242" visible="true" weight="0.16213389" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007576" side_tool="true" weight="0.26708075" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Thumbnails" order="11" weight="0.32919255" />
@@ -602,16 +600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/main/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <marker date="1536444360444" expanded="true" signature="40:41" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/auth/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -629,30 +617,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/auth/views.py">
+    <entry file="file://$PROJECT_DIR$/app/main/forms.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
-            <element signature="e#0#51#0" expanded="true" />
-            <marker date="1536447088517" expanded="true" signature="297:302" ph="..." />
-            <marker date="1536447088517" expanded="true" signature="480:485" ph="..." />
+            <marker date="1536444360444" expanded="true" signature="40:41" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/main/forms.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/auth/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+        <state relative-caret-position="689">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <marker date="1536447978095" expanded="true" signature="454:536" ph="..." />
-            <marker date="1536447978095" expanded="true" signature="895:904" ph="..." />
-            <marker date="1536447978095" expanded="true" signature="1488:1493" ph="..." />
+            <marker date="1536448351255" expanded="true" signature="454:536" ph="..." />
+            <marker date="1536448351255" expanded="true" signature="895:904" ph="..." />
+            <marker date="1536448351255" expanded="true" signature="1488:1493" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/auth/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+            <marker date="1536449304199" expanded="true" signature="1018:1023" ph="..." />
+            <marker date="1536449304199" expanded="true" signature="1226:1231" ph="..." />
           </folding>
         </state>
       </provider>

@@ -1,9 +1,9 @@
 from flask import render_template, url_for, redirect, request, flash
 from . import auth
-
+from flask_login import login_user
 # imoort user model
 from ..models import User
-from ..forms import RegstrationForm, LoginForm
+from ..forms import RegistrationForm, LoginForm
 from .. import db
 
 
@@ -14,16 +14,22 @@ def login():
     login function to render template file
     :return:
     """
-    login_form=LoginForm()
+    login_form=LoginForm() # instance of Login form passed into login template
     if login_form.validate_on_submit():
-        user User.query.filter_by(email = login_form.email.data).first()
+        """
+        checking form validation
+        """
+        user=User.query.filter_by(email = login_form.email.data).first()
+        """
+        searching for user in database with email received from form
+        """
         if user is not None and user.verify_password(login_form.password.data):
             login_user(user, login_form.remember.data)
-            retrun redirect(request.args.get('next') or url_for('main.index'))
+            return redirect(request.args.get('next') or url_for('main.index'))
 
         flash('Invalid username or Password')
 
-     title = "watchlist login"
+    title = "watchlist login"
     return render_template('auth/login.html', login_form, title=title)
 
 
