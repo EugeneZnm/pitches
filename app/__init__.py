@@ -8,12 +8,15 @@ from flask_simplemde import SimpleMDE
 # Uploadset class defining type of file being uploaded
 from flask_uploads import UploadSet, configure_uploads, IMAGES
 
+from flask_mail import Mail
+
+
 # creating instance of Login
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'
 login_manager.login_view = 'auth.login'
 photos = UploadSet('photos', IMAGES)
-
+mail = Mail()
 
 db = SQLAlchemy()
 bootstrap = Bootstrap()
@@ -46,6 +49,7 @@ def create_app(config_name):
     url_prefix adds prefix to all routes registered with blueprint
     
     """
+    mail.init_app(app)
     simple.init_app(app)
     db.init_app(app)
 
