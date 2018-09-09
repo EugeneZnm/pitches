@@ -2,7 +2,7 @@ from flask_login import login_required, current_user
 
 from flask import render_template, redirect, request, url_for, abort
 
-from ..models import User, Pitches
+from ..models import User, Pitches, Comments
 
 from . import main
 
@@ -96,7 +96,8 @@ def update_pic(uname):
     return redirect(url_for('main.profile', uname=uname))
 
 
-@main.route('')
+# display pitches and pitch categories
+@main.route('/pitch', methods=['GET', 'POST'])
 def pitch():
     """
     function to display pitch form
@@ -104,7 +105,7 @@ def pitch():
     pitch = Pitches()
     if pitch.validate_on_submit():
 
-        pitches = Pitches(title=pitch.title.data, post=pitch.post.data, category=pitch.category.data)
+        pitches = Pitches(title=pitch.title.data, pitches=pitch.pitches.data, category=pitch.category.data)
         pitches.save_pitch()
         return redirect(url_for('main.index'))
 
@@ -151,3 +152,22 @@ def motivational():
     motivational = Pitches.query.filter_by(category='Motivational').all()
 
     return render_template('Motivational.html', pitches=motivational)
+
+
+# display comments
+@main.route('/comments', methods = ['GET', 'POST'])
+@login_required
+def comments():
+    """
+    show comments
+    """
+    comment = Comments()
+    if comment.validate_on_submit():
+
+        comments = Comments(title=comment.title.data, comments=comment.comments.data)
+        comments.save_comments()
+        return redirect(url_for('main.new-pitch'))
+
+    title = 'Comment'
+
+    return render_template('comments.html', comment=comment, title=title)
