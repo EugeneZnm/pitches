@@ -104,7 +104,7 @@ class Pitches(db.Model):
         method to return pitches
 
         """
-        pitch = Pitches.query.all()
+        pitch = Pitches.query.filter_by(category=id).all()
         return pitch
 
     def __repr__(self):
@@ -150,11 +150,11 @@ class Comments(db.Model):
         db.session.commit()
 
     @classmethod
-    def get_comments(cls, user_id):
+    def get_comments(cls, id):
         """
         method to return comments
         """
-        comments = Comments.query.filter_by(saying=user_id).all()
+        comments = Comments.query.filter_by(saying=id).all()
         return comments
 
     def __repr__(self):
@@ -180,11 +180,11 @@ class Upvote(db.Model):
         db.session.commit()
 
     @classmethod
-    def get_Upvote(cls, pitch_id):
+    def get_Upvote(cls, id):
         """
         method to return upvote
         """
-        upvote = Upvote.query.filter_by(vote=pitch_id).all()
+        upvote = Upvote.query.filter_by(vote=id).all()
         return upvote
 
 
@@ -205,9 +205,9 @@ class Downvote(db.Model):
         db.session.commit()
 
     @classmethod
-    def get_Downvote(cls, pitch_id):
+    def get_Downvote(cls, id):
         """
         method to return upvote
         """
-        upvote = Upvote.query.filter_by(downvote=pitch_id).all()
+        upvote = Upvote.query.filter_by(downvote=id).all()
         return upvote

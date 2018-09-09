@@ -13,7 +13,6 @@ class Config:
 
     """
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://eugene:necromancer@localhost/pit1'
     SECRET_KEY = os.environ.get('SECRET-KEY')
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
@@ -28,11 +27,18 @@ class ProdConfig(Config):
     pass
 
 
+class TestConfig(Config):
+    """
+    tests configuration class
+    """
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://eugene:necromancer@localhost/pit1'
+
+
 class DevConfig(Config):
     """
     development configuration child class
     """
-
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://eugene:necromancer@localhost/pit1'
     DEBUG = True
 
 
