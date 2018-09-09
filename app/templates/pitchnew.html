@@ -2,15 +2,16 @@
 
 {% block content%}
 <div class="container-fluid">
-
+    {% for saying in pitches %}
   <div class="row">
     <div class="col-sm-4">
-      <img src="{{pitch.saying}}" class="img-responsive">
+        <h3>{{pitch.saying}}</h3>
     </div>
 
     <div class="col-sm-8">
       {{format_pitch|safe}}
     </div>
   </div>
+    {% endfor %}
 </div>
 {%endblock%}
