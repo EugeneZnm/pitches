@@ -1,0 +1,5 @@
+Hello {{user.username}}
+
+Welcome to Pitches
+
+You have signed up to our pitches app. Make your best pitch.
