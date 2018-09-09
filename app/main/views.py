@@ -68,7 +68,7 @@ def update_profile(uname):
 def update_pic(uname):
     user = User.query.filter_by(username = uname).first()
     """
-    querying databse to pick user with username passed in
+    querying database to pick user with username passed in
     """
     if 'photo' in request.files:
         filename = photos.save(request.files['photo'])

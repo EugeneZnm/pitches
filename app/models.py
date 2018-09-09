@@ -89,9 +89,26 @@ class Pitches(db.Model):
     backref used to get the pitches specific to a user
     
     """
+    def save_pitch(self):
+        """
+        method to save pitches
+        :return:
+        """
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def get_pitch(cls, id):
+        """
+        method to return pitches
+        :param id:
+        :return:
+        """
+        pitch = Pitches.query.filter_by(category=id).all()
+        return pitch
 
     def __repr__(self):
-        return f'User {self.promotion.pickup.business.motivational}'
+        return f'User {self.category}'
 
 
 class Roles(db.Model):
