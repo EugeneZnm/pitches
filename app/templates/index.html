@@ -2,6 +2,7 @@
 {% block content %}
 
 <div class="container">
+    {% for pitch in pitches %}
     <div class="card">
         <div class="card-body">
             <h3>{{pitch.category}}</h3>
@@ -9,5 +10,6 @@
             <h6><a href="" class="btn btn-primary">{{comment.saying}}</a>Comment</h6>
         </div>
     </div>
+    {% endfor %}
 </div>
 {% endblock %}
