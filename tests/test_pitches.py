@@ -4,7 +4,7 @@ from app import db
 
 def setUp(self):
     self.user_James = User(username='Eugene', password='redding', email='eugenenzioki@gmail.com')
-    self.new_pitches = Pitches(id=1, category='promotional', pitch='', user=self.user_Eugene)
+    self.pitch = Pitches(id=1, category='promotional', pitch='', user=self.user_Eugene)
 
 
 def tearDown(self):
@@ -22,6 +22,17 @@ def tearDown(self):
 
 
 def test_check_instance_variables(self):
-    self.assertEquals(self.new_pitches.id, 1)
-    self.assertEquals(self.new_pitches.category, 'promotional')
-    self.assertEquals(self.new_review.user, self.user_Eugene)
+    self.assertEquals(self.pitch.id, 1)
+    self.assertEquals(self.pitch.category, 'promotional')
+    self.assertEquals(self.pitch.user, self.user_Eugene)
+
+
+def test_save_review(self):
+    self.pitch.save_pitch()
+    self.assertTrue(len(Pitches.query.all())>0)
+
+
+def test_get_review_by_id(self):
+    self.new_review.save_pitch()
+    got_pitches = Pitches.get_pitch('promotional')
+    self.assertTrue(len(got_pitches) == 1)
