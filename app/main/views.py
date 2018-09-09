@@ -11,6 +11,8 @@ from .forms import UpdateProfile, PitchForm
 # import photos instance
 from .. import db, photos
 
+import markdown2
+
 
 @main.route('/')
 def index():
@@ -167,3 +169,12 @@ def comments():
         return redirect(url_for('main.new-pitch'))
 
     return render_template('comments.html', comment=comment)
+
+
+@main.route('/review/<int:id>')
+def single_pitch(category):
+    pit = Pitches.query.get(category)
+    if pit is None:
+        abort(404)
+    format_pitch = markdown2.markdown(pit.pitch, extras=["code-friendly", "fenced-code-blocks"])
+    return render_template('pitchnew.html', pitch = pit, format_pitch=format_pitch)

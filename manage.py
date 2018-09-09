@@ -13,7 +13,6 @@ manager =Manager(app)
 manager.add_command('server', Server)
 
 
-
 # manager shell decorator to create shell context
 @manager.shell
 def make_shell_context():
@@ -23,7 +22,8 @@ def make_shell_context():
     """
     return dict(app=app, db=db, User=User, Roles=Roles, Pitches=Pitches, Comments=Comments, Upvote=Upvote, Downvote=Downvote)
 
-#initialise migrate class in app instance
+
+# initialise migrate class in app instance
 migrate = Migrate(app, db)
 manager.add_command('db', MigrateCommand)
 

@@ -99,12 +99,12 @@ class Pitches(db.Model):
         db.session.commit()
 
     @classmethod
-    def get_pitch(cls, id):
+    def get_pitch(cls, category):
         """
         method to return pitches
 
         """
-        pitch = Pitches.query.filter_by(category=id).all()
+        pitch = Pitches.query.filter_by(category=category).all()
         return pitch
 
     def __repr__(self):

@@ -1,4 +1,4 @@
-from app.models import Pitches,User
+from app.models import Pitches, User
 from app import db
 
 
@@ -27,12 +27,12 @@ def test_check_instance_variables(self):
     self.assertEquals(self.pitch.user, self.user_Eugene)
 
 
-def test_save_review(self):
+def test_save_pitch(self):
     self.pitch.save_pitch()
-    self.assertTrue(len(Pitches.query.all())>0)
+    self.assertTrue(len(Pitches.query.all()) > 0)
 
 
-def test_get_review_by_id(self):
+def test_get_pitch_by_category(self):
     self.new_review.save_pitch()
     got_pitches = Pitches.get_pitch('promotional')
     self.assertTrue(len(got_pitches) == 1)
