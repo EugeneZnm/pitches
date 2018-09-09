@@ -181,7 +181,7 @@ class Upvote(db.Model):
         """
         method to return upvote
         """
-        upvote = Upvote.query.filter_by(saying=pitch_id).all()
+        upvote = Upvote.query.filter_by(vote=pitch_id).all()
         return upvote
 
 
@@ -193,3 +193,18 @@ class Downvote(db.Model):
     downvote = db.Column(db.Integer)
     pitch_id = db.Column(db.Integer, db.ForeignKey('pitches.id'))
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+
+    def save_Downvote(self):
+        """
+        method to save upvotes
+        """
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def get_Downvote(cls, pitch_id):
+        """
+        method to return upvote
+        """
+        upvote = Upvote.query.filter_by(downvote=pitch_id).all()
+        return upvote
