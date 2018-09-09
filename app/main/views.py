@@ -2,7 +2,9 @@ from flask_login import login_required
 
 from flask import render_template, request, redirect, url_for, abort
 
-from ..models import Reviews, User
+from ..models import User
+
+from . import main
 
 
 @main.route('/user/<uname>')
@@ -24,3 +26,4 @@ def profile(uname):
 
     # template rendering when user is found and passing in of user a a variable
     return render_template("profile/profile.html", user = user)
+
