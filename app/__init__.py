@@ -6,7 +6,7 @@ from flask_login import LoginManager
 
 # creating instance of Login
 login_manager= LoginManager()
-l0gin_manager.session_protection = 'strong'
+login_manager.session_protection = 'strong'
 login_manager.login_view = 'auth.login'
 
 db = SQLAlchemy()

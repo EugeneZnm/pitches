@@ -3,7 +3,7 @@ from . import auth
 from flask_login import login_user, login_required, logout_user
 # imoort user model
 from ..models import User
-from ..forms import RegistrationForm, LoginForm
+from .forms import RegistrationForm, LoginForm
 from .. import db
 
 

@@ -1,7 +1,7 @@
 #  importing db
 from . import db
 # security model providing haching functionality
-from werkzeug.security import generate_password_hash,check_password_hash
+from werkzeug.security import generate_password_hash, check_password_hash
 
 # import class UserMixin
 from flask_login import UserMixin
@@ -32,6 +32,8 @@ class User(UserMixin, db.Model):
     bio = db.Column(db.String(255))
     profile_pic_path = db.Column(db.String())
     password_hash = db.Column(db.String(255))
+    profile_pic_path = db.Column(db.String())
+    password_secure = db.Column(db.String(255))
     """
     creating columns, with primary key set as true
     
