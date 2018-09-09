@@ -1,4 +1,4 @@
-from flask_login import login_required
+from flask_login import login_required, current_user
 
 from flask import render_template, redirect, request, url_for, abort
 
@@ -86,3 +86,8 @@ def update_pic(uname):
         committing changes to database and redirect user to profile page
         """
     return redirect(url_for('main.profile', uname=uname))
+
+@main.route()
+@login_required
+def new_pitch(id):
+    form =
