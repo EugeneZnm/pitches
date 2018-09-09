@@ -140,12 +140,18 @@ class Comments(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
     def save_comments(self):
+        """
+        method to save comments
+        """
         db.session.add(self)
         db.session.commit()
 
     @classmethod
-    def get_comments(cls,user_id):
-        comments = Comment.query.filter_by(saying=id).all()
+    def get_comments(cls, user_id):
+        """
+        method to return comments
+        """
+        comments = Comments.query.filter_by(saying=user_id).all()
         return comments
 
     def __repr__(self):
@@ -162,6 +168,21 @@ class Upvote(db.Model):
     vote = db.Column(db.Integer)
     pitch_id = db.Column(db.Integer, db.ForeignKey('pitches.id'))
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+
+    def save_Upvote(self):
+        """
+        method to save upvotes
+        """
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def get_Upvote(cls, pitch_id):
+        """
+        method to return upvote
+        """
+        upvote = Upvote.query.filter_by(saying=pitch_id).all()
+        return upvote
 
 
 class Downvote(db.Model):
