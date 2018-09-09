@@ -13,6 +13,12 @@
         {%else%}
           <p> {{user.username| capitalize}} has no bio </p>
         {% endif %}
+        {% if user == current_user %}
+        <!--creating a link to update_profile view function inside profile.html file-->
+          <button class="btn btn-success">
+             <a href = "{{url_for('main.update_profile', uname=user.username)}}"></a>EDIT PROFILE
+          </button>
+        {% endif %}
       </div>
 
       <!--Display profile photo-->
