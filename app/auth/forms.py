@@ -23,6 +23,7 @@ class RegistrationForm(FlaskForm):
     age = IntegerField('age', validators=[Required()])
     password = PasswordField('Password',
                              validators=[Required(), EqualTo('password_confirm', message='Passwords must match')])
+    password_second = PasswordField('Confirm password', validators=[Required()])
     submit = SubmitField('SIGN UP')
 
     def validate_email(self, data_field):

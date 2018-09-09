@@ -13,9 +13,12 @@ login_manager = LoginManager()
 login_manager.session_protection = 'strong'
 login_manager.login_view = 'auth.login'
 photos = UploadSet('photos', IMAGES)
-simple.init_app(app)
+
+
 db = SQLAlchemy()
 bootstrap = Bootstrap()
+
+simple =SimpleMDE()
 
 
 def create_app(config_name):

@@ -105,13 +105,11 @@ def pitch():
     pitch = Pitches()
     if pitch.validate_on_submit():
 
-        pitches = Pitches(title=pitch.title.data, pitches=pitch.pitches.data, category=pitch.category.data)
+        pitches = Pitches(pitches=pitch.pitches.data, category=pitch.category.data)
         pitches.save_pitch()
         return redirect(url_for('main.index'))
 
-    title = 'PITCHES'
-
-    return render_template('new-pitch.html',pitch=pitch, title=title)
+    return render_template('new-pitch.html',pitch=pitch)
 
 
 @main.route('/Promotional', methods = ['GET', 'POST'])
@@ -164,10 +162,8 @@ def comments():
     comment = Comments()
     if comment.validate_on_submit():
 
-        comments = Comments(title=comment.title.data, comments=comment.comments.data)
+        comments = Comments(saying=comment.saying.data)
         comments.save_comments()
         return redirect(url_for('main.new-pitch'))
 
-    title = 'Comment'
-
-    return render_template('comments.html', comment=comment, title=title)
+    return render_template('comments.html', comment=comment)

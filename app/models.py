@@ -9,6 +9,8 @@ from flask_login import UserMixin
 # import login manager
 from . import login_manager
 
+from datetime import datetime
+
 
 class User(UserMixin, db.Model):
     """
@@ -136,6 +138,7 @@ class Comments(db.Model):
     __tablename__ = 'comments'
     id = db.Column(db.Integer, primary_key = True)
     saying = db.Column(db.String(267))
+    time = db.Column(db.DateTime, default=datetime.utcnow)
     pitch_id = db.Column(db.Integer, db.ForeignKey('pitches.id'))
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
