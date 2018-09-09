@@ -11,6 +11,9 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET-KEY')
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
+    SIMPLEMDE_JS_IIFE = True
+    SIMPLEMDE_USE_CON = True
+
 
 class ProdConfig(Config):
     """
