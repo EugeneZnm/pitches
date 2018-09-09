@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
 
 # inportation of input fields from
-from wtforms import StringField, PasswordField, SubmitField, IntegerField, BooleanField
+from wtforms import StringField, PasswordField, SubmitField, IntegerField, BooleanField, RadioField, TextAreaField
 
 # importation of validators
 from wtforms.validators import Required, Email, EqualTo
@@ -51,3 +51,13 @@ class LoginForm(FlaskForm):
     remember = BooleanField('Remember me') # render checkbox to remember password details
     submit = SubmitField('Log In')
 
+
+class PitchForm(FlaskForm):
+    """
+    class update to create pitch form
+    """
+    title = StringField('Write Your Pitch', validators=[Required()])
+    pitch = TextAreaField('Pitch Goes Here')
+    Category = RadioField('Categories', choices=[('Promotional'), ('Motivational'),
+                                                 ('Product'),('Ideas')])
+    submit = SubmitField('Submit')

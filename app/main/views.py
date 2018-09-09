@@ -2,7 +2,7 @@ from flask_login import login_required, current_user
 
 from flask import render_template, redirect, request, url_for, abort
 
-from ..models import User
+from ..models import User, Pitches
 
 from . import main
 
@@ -96,16 +96,58 @@ def update_pic(uname):
     return redirect(url_for('main.profile', uname=uname))
 
 
-@main.route()
-@login_required
-def new_pitch(id):
-    form = PitchForm
+@main.route('')
+def pitch():
+    """
+    function to display pitch form
+    """
+    pitch = Pitches()
+    if pitch.validate_on_submit():
 
-    if form.validate_on_submit():
-        title = form.title.data
-        pitch = form.pitch.data
+        pitches = Pitches(title=pitch.title.data, post=pitch.post.data, category=pitch.category.data)
+        pitches.save_pitch()
+        return redirect(url_for('main.index'))
 
-        new_pitch = Pitch()
+    title = 'PITCHES'
 
-        new_pitch.save_pitch()
-        return redirect(url_for('') )
+    return render_template('new-pitch.html',pitch=pitch, title=title)
+
+
+@main.route('/Promotional', methods = ['GET', 'POST'])
+def promote():
+    """
+    displaying promotional pitches
+    """
+    promotional=Pitches.query.filter_by(category="Promotional").all()
+
+    return render_template('promotional.html', pitches =promotional)
+
+
+@main.route('/product', methods = ['GET', 'POST'])
+def product():
+    """
+    show product pitches
+    """
+    product = Pitches.query.filter_by(category="Product").all()
+
+    return render_template('product.html', pitches=product)
+
+
+@main.route('/Religious', methods = ['GET', 'POST'])
+def religious():
+    """
+     show religious pitches
+    """
+    religious = Pitches.query.filter_by(category="Religious").all()
+
+    return render_template('Religious.html', pitches=religious)
+
+
+@main.route('/Motivational', methods = ['GET', 'POST'])
+def motivational():
+    """
+    show motivational pitches
+    """
+    motivational = Pitches.query.filter_by(category='Motivational').all()
+
+    return render_template('Motivational.html', pitches=motivational)

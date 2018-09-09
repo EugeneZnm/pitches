@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html'%}
 
-</body>
-</html>
+{% block content%}
+
+<div class="container-fluid">
+    <div>
+        {{ wtf.quick_form(pitch_form) }}
+        {{simplemde.load}}
+    </div>
+</div>
+
+{% endblock %}

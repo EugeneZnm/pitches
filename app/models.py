@@ -102,7 +102,7 @@ class Pitches(db.Model):
         method to return pitches
 
         """
-        pitch = Pitches.query.filter_by(category=id).all()
+        pitch = Pitches.query.all()
         return pitch
 
     def __repr__(self):
