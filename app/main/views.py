@@ -6,10 +6,18 @@ from ..models import User
 
 from . import main
 
-from .forms import UpdateProfile
+from .forms import UpdateProfile, PitchForm
 
 # import photos instance
 from .. import db, photos
+
+
+@main.route('/')
+def index():
+
+    title = 'PITCHES'
+
+    return render_template('index.html', title=title)
 
 
 @main.route('/user/<uname>')
@@ -87,7 +95,17 @@ def update_pic(uname):
         """
     return redirect(url_for('main.profile', uname=uname))
 
+
 @main.route()
 @login_required
 def new_pitch(id):
-    form =
+    form = PitchForm
+
+    if form.validate_on_submit():
+        title = form.title.data
+        pitch = form.pitch.data
+
+        new_pitch = Pitch()
+
+        new_pitch.save_pitch()
+        return redirect(url_for('') )

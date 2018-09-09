@@ -46,7 +46,7 @@ def register():
         db.session.commit()
         title = "Welcome New User"
         return redirect(url_for('auth.login'))
-    return render_template('auth/register.html', registration_form = form)
+    return render_template('auth/register.html', registration_form=form)
 
 
 # logout route to logout user from application

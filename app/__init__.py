@@ -3,6 +3,7 @@ from config import config_options
 from flask_sqlalchemy import SQLAlchemy
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
+from flask_simplemde import SimpleMDE
 
 # Uploadset class defining type of file being uploaded
 from flask_uploads import UploadSet, configure_uploads, IMAGES
@@ -12,7 +13,7 @@ login_manager = LoginManager()
 login_manager.session_protection = 'strong'
 login_manager.login_view = 'auth.login'
 photos = UploadSet('photos', IMAGES)
-
+simple.init_app(app)
 db = SQLAlchemy()
 bootstrap = Bootstrap()
 
@@ -42,6 +43,7 @@ def create_app(config_name):
     url_prefix adds prefix to all routes registered with blueprint
     
     """
+    simple.init_app(app)
     db.init_app(app)
 
     return app
