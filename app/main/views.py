@@ -1,6 +1,6 @@
 from flask_login import login_required
 
-from flask import render_template, redirect, url_for, abort
+from flask import render_template, redirect, request, url_for, abort
 
 from ..models import User
 
@@ -8,7 +8,8 @@ from . import main
 
 from .forms import UpdateProfile
 
-from .. import db
+# import photos instance
+from .. import db, photos
 
 
 @main.route('/user/<uname>')
@@ -59,3 +60,29 @@ def update_profile(uname):
         return redirect(url_for('.profile', uname=user.username))
 
     return render_template('profile/update.html', form =form)
+
+
+# route processing form submission request accepting only post requests
+@main.route('/user/<uname>/update/pic',methods=['POST'])
+@login_required
+def update_pic(uname):
+    user = User.query.filter_by(username = uname).first()
+    """
+    querying databse to pick user with username passed in
+    """
+    if 'photo' in request.files:
+        filename = photos.save(request.files['photo'])
+        """
+        request function to check in any parameter with name photo passed into request
+        save method to save file into application
+        """
+        path = f'photos/{filename}'
+        user.profile_pic_path = path
+        """
+        update profile pic path property in user table and store path to the file
+        """
+        db.session.commit()
+        """
+        committing changes to database and redirect user to profile page
+        """
+    return redirect(url_for('main.profile', uname=uname))
