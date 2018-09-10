@@ -19,8 +19,8 @@ import markdown2
 def index():
 
     title = 'PITCHES'
-
-    return render_template('index.html', title=title)
+    all = Pitches.query.all()
+    return render_template('index.html',all=all, title=title)
 
 
 @main.route('/user/<uname>')
@@ -105,14 +105,15 @@ def pitch():
     """
     function to display pitch form
     """
-    pitch = Pitches()
-    if pitch.validate_on_submit():
+    pitchy = PitchForm()
 
-        pitches = Pitches(pitches=pitch.pitches.data, category=pitch.category.data)
-        pitches.save_pitch()
-        return redirect(url_for('main.index'))
+    if pitchy.validate_on_submit():
 
-    return render_template('new-pitch.html',pitch=pitch)
+        pitchest = Pitches(pitch=pitchy.pitch.data, category=pitchy.category.data)
+        pitchest.save_pitch()
+        return redirect(url_for(    'main.index'))
+
+    return render_template('new-pitch.html',pitch=pitchy)
 
 
 @main.route('/Promotional', methods = ['GET', 'POST'])

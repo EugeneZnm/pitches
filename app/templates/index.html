@@ -2,12 +2,46 @@
 {% block content %}
 
 <div class="container">
-    {% for pitch in pitches %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card" style= "height:300px">
+                <button class=" card-body btn btn-primary"><a href="{{url_for('main.motivational')}}" style="color: white;"><h1>MOTIVATIONAL</h1></a></button>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card" style= "height:300px">
+                <button class=" card-body btn btn-warning"><a href="{{url_for('main.promote')}}" style="color: white;"><h1>PROMOTIONAL</h1></a></button>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card" style= "height:300px">
+                <button class=" card-body btn btn-danger"><a href="{{url_for('main.religious')}}" style="color: white;"><h1>RELIGIOUS</h1></a></button>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card" style= "height:300px">
+                <button class=" card-body btn btn-success"><a href="{{url_for('main.product')}}" style="color: white;"><h1>PRODUCT</h1></a></button>
+            </div>
+        </div>
+    </div>
+
+    {% for pitch in all %}
     <div class="card">
-        <div class="card-body">
-            <h3>{{pitch.category}}</h3>
-            <h3>{{pitch.pitch}}</h3>
-            <h6><a href="" class="btn btn-primary">{{comment.saying}}</a>Comment</h6>
+        <div class="card-header">
+            <div class="card-title">
+                <h3>PITCH CATEGORY: {{pitch.category}}</h3>
+            </div>
+            <div class="card-subtitle">
+                <h4>INTRO: {{pitch.title}}</h4>
+            </div>
+            <div class="card-text">
+                <h5>THE PITCH: {{pitch.pitch}}</h5>
+            </div>
         </div>
     </div>
     {% endfor %}

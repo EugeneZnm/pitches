@@ -38,5 +38,7 @@
         {% endif %}
       </div>
     </div>
+    {% for pitch in pitches %}
+  <div>{{pitch.category}} {{pitch.pitch}}</div> {% endfor %}
 </div>
 {% endblock %}

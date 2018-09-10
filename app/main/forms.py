@@ -2,7 +2,7 @@ from flask_wtf import FlaskForm
 
 from flask import render_template, url_for, redirect, abort
 
-from wtforms import StringField, TextAreaField, SubmitField, RadioField
+from wtforms import StringField, TextAreaField, SubmitField, RadioField, TextField
 
 from wtforms.validators import Required
 
@@ -19,10 +19,9 @@ class PitchForm(FlaskForm):
     """
     class to create pitch form
     """
-    title = StringField('Write Your Pitch', validators=[Required()])
+    title = TextField('Something about your pitch', validators=[Required()])
     pitch = TextAreaField('Pitch Goes Here')
-    Category = RadioField('Categories', choices=[('Promotional'), ('Motivational'),
-                                                 ('Product'),('Ideas')])
+    category = RadioField('Categories', choices = [('Promotional', 'Promotional'),('Product', 'Product'),('Ideas', 'Ideas'), ('Motivational','Motivational')],validators=[Required()])
     submit = SubmitField('Submit')
 
 
