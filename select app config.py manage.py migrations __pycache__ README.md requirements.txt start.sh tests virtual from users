@@ -1,0 +1,12 @@
+             List of relations
+ Schema |      Name       | Type  | Owner  
+--------+-----------------+-------+--------
+ public | alembic_version | table | eugene
+ public | comments        | table | eugene
+ public | downvote        | table | eugene
+ public | pitches         | table | eugene
+ public | roles           | table | eugene
+ public | upvote          | table | eugene
+ public | users           | table | eugene
+(7 rows)
+

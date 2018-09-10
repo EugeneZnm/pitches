@@ -30,11 +30,11 @@ def login():
 
         flash('Invalid username or Password')
 
-    title = "watchlist login"
+    title = "Pitches login"
     return render_template('auth/login.html', login_form=login_form, title=title)
 
 
-@auth.route('register', methods=['GET', "POST"])
+@auth.route('/register', methods=['GET','POST'])
 def register():
     """
     function to render registration form
@@ -42,9 +42,12 @@ def register():
     """
     form = RegistrationForm()
     if form.validate_on_submit():
-        user = User(email=form.email.data, username=form.username.data, age=form.age.data, password=form.password.data)
+
+        user = User(username=form.username.data, email=form.email.data, age=form.age.data)
+        user.set_password(form.password.data)
         db.session.add(user)
         db.session.commit()
+
         title = "Welcome New User"
         return redirect(url_for('auth.login'))
     return render_template('auth/register.html', registration_form=form)

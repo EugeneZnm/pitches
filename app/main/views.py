@@ -15,6 +15,7 @@ import markdown2
 
 
 @main.route('/')
+@login_required
 def index():
 
     title = 'PITCHES'
@@ -43,7 +44,7 @@ def profile(uname):
     return render_template("profile/profile.html", user = user)
 
 
-@main.route('user/<uname>/update', methods = ['GET', 'POST'])
+@main.route('/user/<uname>/update', methods = ['GET', 'POST'])
 @login_required
 def update_profile(uname):
     """

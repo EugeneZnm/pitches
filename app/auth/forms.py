@@ -21,8 +21,7 @@ class RegistrationForm(FlaskForm):
     email = StringField('Input Email Address', validators=[Required(), Email()])
     username = StringField('Input username', validators=[Required()])
     age = IntegerField('age', validators=[Required()])
-    password = PasswordField('Password',
-                             validators=[Required(), EqualTo('password_confirm', message='Passwords must match')])
+    password = PasswordField('Password',validators=[Required(), EqualTo('password', message='Passwords must match')])
     password_second = PasswordField('Confirm password', validators=[Required()])
     submit = SubmitField('SIGN UP')
 
