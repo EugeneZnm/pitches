@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d7836bd-e796-48ce-a11b-694f598be842" name="Default Changelist" comment="" />
+    <list default="true" id="5d7836bd-e796-48ce-a11b-694f598be842" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/virtual/bin/activate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/virtual/bin/activate.csh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/virtual/bin/activate.fish" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/virtual/bin/python" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/virtual/bin/python3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/virtual/bin/python3.6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/virtual/lib64" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/virtual/pyvenv.cfg" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -385,9 +394,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
+    <frame x="180" y="153" width="1024" height="522" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10757576" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14519428" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection Results" weight="0.34937888" />
@@ -399,7 +408,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3275862" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49772727" visible="true" weight="0.32608697" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49772727" visible="true" weight="0.5329949" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5022727" side_tool="true" weight="0.33695653" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Thumbnails" order="11" weight="0.32919255" />
