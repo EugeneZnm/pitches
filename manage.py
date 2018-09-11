@@ -1,7 +1,7 @@
 from app import create_app,db
 from app.models import User, Pitches, Comments, Upvote, Downvote, Roles
 from flask_script import Manager, Server
-from flask_migrate import Migrate, MigrateCommand
+from flask_migrate import Migrate, MigrateCommand2
 
 # Creating app instance
 app = create_app('production')
