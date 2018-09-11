@@ -317,11 +317,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="127" />
-    <option name="y" value="21" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="180" />
+    <option name="y" value="153" />
     <option name="width" value="1024" />
-    <option name="height" value="550" />
+    <option name="height" value="522" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
