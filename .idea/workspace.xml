@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d7836bd-e796-48ce-a11b-694f598be842" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/virtual/bin/activate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/virtual/bin/activate.csh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/virtual/bin/activate.fish" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/virtual/bin/python" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/virtual/bin/python3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/virtual/bin/python3.6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/virtual/lib64" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/virtual/pyvenv.cfg" beforeDir="false" />
-    </list>
+    <list default="true" id="5d7836bd-e796-48ce-a11b-694f598be842" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,23 +67,14 @@
     <splitter split-orientation="horizontal" split-proportion="0.87606114">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/__init__.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" selection-start-line="22" selection-end-line="22" />
+                <state relative-caret-position="57">
+                  <caret line="18" selection-start-line="18" selection-end-line="18" />
                   <folding>
                     <element signature="e#0#23#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/requirements.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" column="9" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -710,16 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="972">
@@ -745,8 +717,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="97">
           <caret line="8" column="9" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
