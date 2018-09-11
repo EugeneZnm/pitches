@@ -4,7 +4,7 @@ from app.models import User, Pitches, Comments, Upvote, Downvote, Roles
 from flask_script import Manager, Server
 
 # Creating app instance
-app = create_app('development')
+app = create_app('production')
 
 # instantiate manager class
 manager =Manager(app)
