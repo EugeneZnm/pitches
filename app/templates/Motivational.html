@@ -2,10 +2,14 @@
 {% block content %}
 
 <div class="container">
+    <h1 style="font-weight: bold;">MOTIVATIONAL PITCHES</h1>
     {% for pitch in pitches %}
-    <div class="card">
+    <div class="card" stlye="backgroud-color: grey">
         <div class="card-body">
-            <h3>Quote: {{pitch.pitch}}</h3>
+            <h4 class="card-title">Pitch By:{{pitch.user_id}}</h5>
+            <h5>Pitch: {{pitch.pitch}}</h5>
+            <h5>Created at: {{pitch.time}}</h5>
+            <p><a href="/comments/{{pitch.id}}"><button class="btn btn-success">COMMENT</button></a></p>
         </div>
     </div>
     {% endfor %}

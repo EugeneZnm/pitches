@@ -1,11 +1,18 @@
 {% extends 'base.html'%}
+{% import "bootstrap/wtf.html" as wtf %}
 
 {% block content%}
 
 <div class="container-fluid">
-    <div>
-        {{ wtf.quick_form(commentform) }}
-        {{simplemde.load}}
+    <div class="row">
+        <div class="col-md-9">
+            {{ wtf.quick_form(comment2) }}
+            {{simplemde.load}}
+        </div>
+        <div class="col-md-3">
+           <h5>BY: {{comment2.title}}</h5>
+            <h5>Comment: {{comment2.saying}}</h5>
+        </div>
     </div>
 </div>
 

@@ -1,7 +1,5 @@
 from flask_wtf import FlaskForm
 
-from flask import render_template, url_for, redirect, abort
-
 from wtforms import StringField, TextAreaField, SubmitField, RadioField, TextField
 
 from wtforms.validators import Required
@@ -19,9 +17,9 @@ class PitchForm(FlaskForm):
     """
     class to create pitch form
     """
-    title = TextField('Something about your pitch', validators=[Required()])
+    title = StringField('Something about your pitch', validators=[Required()])
     pitch = TextAreaField('Pitch Goes Here')
-    category = RadioField('Categories', choices = [('Promotional', 'Promotional'),('Product', 'Product'),('Ideas', 'Ideas'), ('Motivational','Motivational')],validators=[Required()])
+    category = RadioField('Categories', choices = [('Promotional', 'Promotional'),('Product', 'Product'),('Religious', 'Religious'), ('Motivational','Motivational')],validators=[Required()])
     submit = SubmitField('Submit')
 
 
@@ -29,6 +27,14 @@ class CommentForm(FlaskForm):
     """
     class to create comment form
     """
-    title = StringField('comment here', validators=[Required()])
-    comment = TextAreaField('Write your comment')
+    title = StringField('Comment By: Username', validators=[Required()])
+    saying = TextAreaField('Write your comment')
     submit = SubmitField('Submit')
+
+
+class UpVote(FlaskForm):
+    submit = SubmitField('UPVOTE')
+
+
+class DownVote(FlaskForm):
+    submit = SubmitField('DOWNVOTE')

@@ -6,7 +6,7 @@ from ..models import User, Pitches, Comments
 
 from . import main
 
-from .forms import UpdateProfile, PitchForm
+from .forms import UpdateProfile, PitchForm, CommentForm
 
 # import photos instance
 from .. import db, photos
@@ -157,26 +157,30 @@ def motivational():
 
 
 # display comments
-@main.route('/comments', methods = ['GET', 'POST'])
+@main.route('/comments/<int:id>', methods = ['GET', 'POST'])
 @login_required
-def comments():
+def comments(id):
     """
     show comments
     """
-    comment = Comments()
-    if comment.validate_on_submit():
+    comment1 = CommentForm()
+    if comment1.validate_on_submit():
 
-        comments = Comments(saying=comment.saying.data)
-        comments.save_comments()
-        return redirect(url_for('main.new-pitch'))
+        comment1 = Comments(saying=comment1.saying.data,pitch_id=id, user_id=current_user.id )
+        comment1.save_comments()
+        comment_is= Comments.query.filter_by(pitch_id=id)
+        return render_template('comments.html', comment2=comment1, comment_is=comment_is)
 
-    return render_template('comments.html', comment=comment)
+    return render_template('comments.html', comment2=comment1)
 
 
-@main.route('/review/<int:id>')
+@main.route('/Pitch/<int:id>')
 def single_pitch(category):
     pit = Pitches.query.get(category)
     if pit is None:
         abort(404)
     format_pitch = markdown2.markdown(pit.pitch, extras=["code-friendly", "fenced-code-blocks"])
     return render_template('pitchnew.html', pitch = pit, format_pitch=format_pitch)
+
+
+

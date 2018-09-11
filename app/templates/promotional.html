@@ -5,7 +5,8 @@
     {% for pitch in pitches %}
     <div class="card">
         <div class="card-body">
-            <h3>Quote: {{pitch.pitch}}</h3>
+            <h4>Pitch:</h4><h5>{{pitch.pitch}}</h5>
+            <h4>Pitch By:</h4><h5>{{pitch.user_id}}</h5>
         </div>
     </div>
     {% endfor %}
