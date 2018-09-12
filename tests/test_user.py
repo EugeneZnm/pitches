@@ -1,5 +1,6 @@
 import unittest
 from app.models import User
+from app import db
 
 
 class UserModelsTest(unittest.TestCase):
@@ -9,14 +10,14 @@ class UserModelsTest(unittest.TestCase):
         creating instance of user class
         :return:
         """
-        self.__new__user = User(password = 'emancipation')
+        self.new__user = User(email='x418087@gmail.com')
 
     def test_password_setter(self):
         """
         test case password setter ascertaining when password os being hashed
         :return:
         """
-        self.assertTrue(self.__new__user.pass_secure is not None)
+        self.assertTrue(self.new__user.pass_secure is not None)
 
     def test_no_access(self):
         """
@@ -24,11 +25,11 @@ class UserModelsTest(unittest.TestCase):
         :return:
         """
         with self.assertRaises(AttributeError):
-            self.__new__user.password
+            self.new__user.email
 
     def test_password_verification(self):
         """
         confirming password verification
         :return:
         """
-        self.assertTrue(self.__new__user.verify_password('emancipation'))
+        self.assertTrue(self.new__user.verify_email('x418087@gmail.com'))

@@ -34,7 +34,6 @@ class User(UserMixin, db.Model):
     bio = db.Column(db.String(255))
     profile_pic_path = db.Column(db.String())
     # password_hash = db.Column(db.String(255))
-    profile_pic_path = db.Column(db.String())
     pass_secure = db.Column(db.String(255))
     """
     creating columns, with primary key set as true
@@ -50,6 +49,7 @@ class User(UserMixin, db.Model):
     # @property
     # def password(self):
     #     raise AttributeError('YOU CANNOT READ THE PASSWORD')
+    @password.setter
     def set_password(self,password):
         self.pass_secure = generate_password_hash(password)
 
