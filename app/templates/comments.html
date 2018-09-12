@@ -6,13 +6,15 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-9">
-            {{ wtf.quick_form(comment2) }}
+            {{ wtf.quick_form(comment) }}
             {{simplemde.load}}
         </div>
+        {% for comm in comment_is %}
         <div class="col-md-3">
-           <h5>BY: {{comment2.title}}</h5>
-            <h5>Comment: {{comment2.saying}}</h5>
+           <h5>BY: {{comm.title}}</h5>
+            <h5>Comment: {{comm.saying}}</h5>
         </div>
+        {% endfor %}
     </div>
 </div>
 

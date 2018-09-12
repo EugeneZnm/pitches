@@ -6,6 +6,8 @@ class Config:
     general configuration parent class
 
     """
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://eugene:necromancer@localhost/pit1'
+    SECRET_KEY = os.environ.get('SECRET_KEY')
 
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
@@ -17,8 +19,6 @@ class ProdConfig(Config):
     """
     production configuration child class
     """
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://eugene:necromancer@localhost/pit1'
-    SECRET_KEY = os.environ.get('SECRET_KEY')
 
     #  email configurations
     MAIL_SERVER = 'smtp.googlemail.com'
