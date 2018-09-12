@@ -17,7 +17,7 @@ class ProdConfig(Config):
     """
     production configuration child class
     """
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://eugene:necromancer@localhost/pit1'
+    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://eugene:necromancer@localhost/pit1'
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
     #  email configurations
@@ -28,22 +28,22 @@ class ProdConfig(Config):
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
 
 
-class TestConfig(Config):
-    """
-    tests configuration class
-    """
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://eugene:necromancer@localhost/pitches_test'
+# class TestConfig(Config):
+#     """
+#     tests configuration class
+#     """
+#     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://eugene:necromancer@localhost/pitches_test'
 
 
-class DevConfig(Config):
-    """
-    development configuration child class
-    """
-    DEBUG = True
+# class DevConfig(Config):
+#     """
+#     development configuration child class
+#     """
+#     DEBUG = True
 
 
 config_options={
-    'development': DevConfig,
+    # 'development': DevConfig,
     'production': ProdConfig,
-    'test': TestConfig
+    # 'test': TestConfig
 }
