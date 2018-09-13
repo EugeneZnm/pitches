@@ -49,7 +49,6 @@ class User(UserMixin, db.Model):
     # @property
     # def password(self):
     #     raise AttributeError('YOU CANNOT READ THE PASSWORD')
-    @password.setter
     def set_password(self,password):
         self.pass_secure = generate_password_hash(password)
 

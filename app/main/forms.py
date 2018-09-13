@@ -27,7 +27,6 @@ class CommentForm(FlaskForm):
     """
     class to create comment form
     """
-    title = StringField('Comment By: Username', validators=[Required()])
     saying = TextAreaField('Write your comment')
     submit = SubmitField('Submit')
 

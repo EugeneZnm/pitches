@@ -15,7 +15,6 @@ import markdown2
 
 
 @main.route('/')
-@login_required
 def index():
 
     title = 'PITCHES'
@@ -163,15 +162,16 @@ def comments(id):
     """
     show comments
     """
-    comment1 = CommentForm()
-    if comment1.validate_on_submit():
+    comment = CommentForm()
+    comment_is = Comments.query.filter_by(pitch_id=id)
+    if comment.validate_on_submit():
 
-        comment1 = Comments(saying=comment1.saying.data,pitch_id=id, user_id=current_user.id )
-        comment1.save_comments()
+        comments = Comments(saying=comment.saying.data,pitch_id=id, user_id=current_user.id )
+        comments.save_comments()
         comment_is= Comments.query.filter_by(pitch_id=id)
-        return render_template('comments.html', comment2=comment1, comment_is=comment_is)
+        return render_template('comments.html', comment=comment, comment_is=comment_is)
 
-    return render_template('comments.html', comment2=comment1)
+    return render_template('comments.html', comment=comment, comment_is=comment_is)
 
 
 @main.route('/Pitch/<int:id>')

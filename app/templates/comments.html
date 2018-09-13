@@ -4,15 +4,18 @@
 {% block content%}
 
 <div class="container-fluid">
+
     <div class="row">
-        <div class="col-md-9">
-            {{ wtf.quick_form(comment2) }}
+        <div class="col-md-9" style="height: 100px;">
+            {{ wtf.quick_form(comment) }}
             {{simplemde.load}}
         </div>
         <div class="col-md-3">
-           <h5>BY: {{comment2.title}}</h5>
-            <h5>Comment: {{comment2.saying}}</h5>
+            {% for comm in comment_is %}
+            <h5  style="background-color: #8aa0de; text-color: white; width:400px; height: 50px;">Comment: {{comm.saying}}</h5>
+            {% endfor %}
         </div>
+
     </div>
 </div>
 
