@@ -1,40 +1,27 @@
-from app.models import Pitches, User
-from app import db
 import unittest
+from app.models import Pitches, User
 
 
-class PitchesModelTest(unittest.TestCase):
+class PostModelTest(unittest.TestCase):
+
     def setUp(self):
         self.user_eugene = User(username='eugene', email='eugenenzioki@gmail.com',password='redding', )
-        self.pitch = Pitches(id=1, category='promotional', pitch='', user=self.user_eugene)
+        self.new_pitch = Pitches(title='a', post='b', category='d', posts=self.user_eugene)
 
+    def test_instance(self):
+        self.assertEqual(self.new_pitch.title, 'a')
+        self.assertEqual(self.new_pitch, 'b')
+        self.assertEqual(self.new_pitch.category, 'd')
 
-    def tearDown(self):
-        """
-        tear down method
-        """
-        Pitches.query.delete()
-        """
-        delete all pitches from database
-        """
-        User.query.delete()
-        """
-        delete all users from database
-        """
-
-
-    def test_check_instance_variables(self):
-        self.assertEquals(self.pitch.id, 1)
-        self.assertEquals(self.pitch.category, 'promotional')
-        self.assertEquals(self.pitch.user, self.user_eugene)
-
-
-    def test_save_pitch(self):
-        self.pitch.save_pitch()
+    def test_save_post(self):
+        self.new_pitch.save_pitch()
         self.assertTrue(len(Pitches.query.all()) > 0)
 
+    def test_get_post_by_id(self):
+        self.new_pitch.save_pitch()
+        got_pitch = Pitches.get_pitch(1)
+        self.assertTrue(len(got_pitch) > 0)
 
-    def test_get_pitch_by_category(self):
-        self.new_review.save_pitch()
-        got_pitches = Pitches.get_pitch('promotional')
-        self.assertTrue(len(got_pitches) == 1)
+
+if __name__ == '__main__':
+    unittest.main()
