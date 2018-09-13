@@ -1,27 +1,24 @@
 import unittest
-from app.models import Comment, User
-from app import db
+from app.models import Comments
 
 
-class CommentModelTest(unittest.TestCase):
+class CommentsModelTest(unittest.TestCase):
+
     def setUp(self):
-        self.user_eugene = User(username='eugene', password='emancipation')
-        self.new_comment = Comment(pitch_id=555)
+        self.new_comment = Comments(comment='a')
 
-    # def tearDown(self):
-    #         Review.query.delete()
-    #         User.query.delete()
-
-    def test_check_instance_variables(self):
-        self.assertEquals(self.new_comment.pitch_id, 555)
-
-        # self.assertEquals(self.new_comment.user,self.user_naiyoma)
+    def test_instance(self):
+        self.assertEqual(self.new_comment.comment, 'a')
 
     def test_save_comment(self):
         self.new_comment.save_comment()
-        self.assertTrue(len(Comment.query.all()) > 0)
+        self.assertTrue(len(Comments.query.all()) > 0)
 
     def test_get_comment_by_id(self):
         self.new_comment.save_comment()
-        got_comments = Comment.get_comments(555)
-        self.assertTrue(len(got_comments) == 1)
+        got_comment = Comments.get_comment(1)
+        self.assertTrue(len(got_comment) > 0)
+
+
+if __name__ == '__main__':
+    unittest.main()
