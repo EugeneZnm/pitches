@@ -132,7 +132,7 @@ def product():
     """
     product = Pitches.query.filter_by(category="Product").all()
 
-    return render_template('product.html', pitches=product)
+    return render_template('Product.html', pitches=product)
 
 
 @main.route('/Religious', methods = ['GET', 'POST'])

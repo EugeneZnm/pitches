@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d7836bd-e796-48ce-a11b-694f598be842" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/views.py" afterDir="false" />
@@ -14,6 +15,15 @@
       <change beforePath="$PROJECT_DIR$/app/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/promotional.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/promotional.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/comments.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/comments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/start.sh" afterDir="false" />
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,11 +47,19 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="Procfile" value="1" />
           <entry key="gitignore" value="1" />
+<<<<<<< HEAD
           <entry key="html" value="62" />
           <entry key="md" value="2" />
           <entry key="procfile" value="5" />
           <entry key="py" value="63" />
+=======
+          <entry key="html" value="53" />
+          <entry key="md" value="2" />
+          <entry key="procfile" value="5" />
+          <entry key="py" value="62" />
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
           <entry key="sh" value="4" />
           <entry key="txt" value="4" />
         </counts>
@@ -49,18 +67,33 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Bash" value="4" />
+<<<<<<< HEAD
           <entry key="HTML" value="62" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="Python" value="63" />
+=======
+          <entry key="HTML" value="53" />
+          <entry key="Markdown" value="2" />
+          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="Python" value="62" />
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="html" value="3248" />
           <entry key="md" value="145" />
           <entry key="procfile" value="1" />
           <entry key="py" value="18240" />
+=======
+          <entry key="Procfile" value="1" />
+          <entry key="html" value="2839" />
+          <entry key="md" value="145" />
+          <entry key="procfile" value="1" />
+          <entry key="py" value="18256" />
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
           <entry key="sh" value="64" />
           <entry key="txt" value="141" />
         </counts>
@@ -68,10 +101,17 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="64" />
+<<<<<<< HEAD
           <entry key="HTML" value="3248" />
           <entry key="Markdown" value="145" />
           <entry key="PLAIN_TEXT" value="142" />
           <entry key="Python" value="18240" />
+=======
+          <entry key="HTML" value="2839" />
+          <entry key="Markdown" value="145" />
+          <entry key="PLAIN_TEXT" value="137" />
+          <entry key="Python" value="18256" />
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
         </counts>
       </usages-collector>
     </session>
@@ -81,12 +121,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/Motivational.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="60">
               <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+=======
+            <state relative-caret-position="-1156">
+              <caret line="50" column="62" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="62" />
+              <folding>
+                <element signature="e#16#32#0" expanded="true" />
+                <marker date="1536747368958" expanded="true" signature="1625:1671" ph="..." />
+                <marker date="1536747368958" expanded="true" signature="1813:1879" ph="..." />
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
               </folding>
             </state>
           </provider>
@@ -95,13 +144,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/new-pitch.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="15">
               <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="40" />
+=======
+            <state relative-caret-position="22">
+              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+                <marker date="1536747342652" expanded="true" signature="408:563" ph="..." />
+              </folding>
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/templates/Product.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -110,11 +169,30 @@
                 <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/main/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="6" selection-start-column="6" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/main/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="167" lean-forward="true" selection-start-line="167" selection-end-line="167" />
+              <folding>
+                <element signature="e#0#52#0" expanded="true" />
+                <marker date="1536751950743" expanded="true" signature="348:464" ph="..." />
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/promotional.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -125,6 +203,13 @@
                 <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
               </folding>
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/templates/comments.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
             </state>
           </provider>
         </entry>
@@ -142,6 +227,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/pitchpage.html">
           <provider selected="true" editor-type-id="text-editor" />
@@ -160,11 +246,19 @@
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
               </folding>
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-68">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/templates/navbar.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
@@ -175,20 +269,34 @@
                 <element signature="e#980#986#0" expanded="true" />
                 <element signature="e#986#992#0" expanded="true" />
               </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="20" selection-start-column="20" selection-end-column="20" />
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/templates/macros.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+=======
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1464">
@@ -196,6 +304,12 @@
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/start.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
             </state>
           </provider>
         </entry>
@@ -249,15 +363,22 @@
         <option value="$PROJECT_DIR$/app/templates/new-pitch.html" />
         <option value="$PROJECT_DIR$/app/templates/profile/profile.html" />
         <option value="$PROJECT_DIR$/app/templates/pitchpage.html" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Procfile" />
+=======
+        <option value="$PROJECT_DIR$/app/templates/Motivational.html" />
+        <option value="$PROJECT_DIR$/app/templates/index.html" />
+        <option value="$PROJECT_DIR$/app/main/forms.py" />
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
         <option value="$PROJECT_DIR$/tests/test_pitches.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/main/__init__.py" />
         <option value="$PROJECT_DIR$/tests/test_user.py" />
         <option value="$PROJECT_DIR$/tests/test_comments.py" />
-        <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/start.sh" />
         <option value="$PROJECT_DIR$/config.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/app/main/forms.py" />
@@ -277,6 +398,20 @@
     <option name="y" value="24" />
     <option name="width" value="1021" />
     <option name="height" value="744" />
+=======
+        <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/app/models.py" />
+        <option value="$PROJECT_DIR$/app/main/views.py" />
+        <option value="$PROJECT_DIR$/app/templates/comments.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="192" />
+    <option name="y" value="131" />
+    <option name="width" value="1024" />
+    <option name="height" value="522" />
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -363,6 +498,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="332" y="24" width="1021" height="744" extended-state="4" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23794872" />
@@ -381,12 +517,59 @@
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Thumbnails" order="11" weight="0.32919255" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.34937888" />
+=======
+    <frame x="192" y="131" width="1024" height="522" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17484662" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.34937888" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32919255" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32608697" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49772727" weight="0.25776398" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5022727" side_tool="true" weight="0.33695653" />
+      <window_info anchor="bottom" id="Python Console" order="11" />
+      <window_info anchor="bottom" id="Thumbnails" order="12" weight="0.32919255" />
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="R Graphics" order="3" />
       <window_info anchor="right" id="R Packages" order="4" weight="0.32954547" />
     </layout>
+<<<<<<< HEAD
+=======
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.175" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.34937888" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32919255" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32608697" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49772727" visible="true" weight="0.25776398" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5022727" side_tool="true" weight="0.33695653" />
+      <window_info anchor="bottom" id="Python Console" order="11" />
+      <window_info anchor="bottom" id="Thumbnails" order="12" weight="0.32919255" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="R Packages" order="4" weight="0.32954547" />
+    </layout-to-restore>
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -496,6 +679,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/tests/test_pitches.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -504,6 +688,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_user.py">
+=======
+    <entry file="file://$PROJECT_DIR$/app/templates/Motivational.html">
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
@@ -538,6 +725,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -557,6 +745,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/start.sh">
+=======
+    <entry file="file://$PROJECT_DIR$/app/email.py">
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
@@ -605,6 +796,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/templates/new-pitch.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -633,6 +825,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/navbar.html">
+=======
+    <entry file="file://$PROJECT_DIR$/tests/test_comments.py">
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="31" column="84" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="84" />
@@ -672,6 +867,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/templates/Product.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -680,12 +876,36 @@
             <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+            <marker date="1536747342652" expanded="true" signature="408:563" ph="..." />
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/promotional.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="60">
           <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
           <folding>
@@ -704,6 +924,40 @@
             <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="75">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1156">
+          <caret line="50" column="62" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="62" />
+          <folding>
+            <element signature="e#16#32#0" expanded="true" />
+            <marker date="1536747368958" expanded="true" signature="1625:1671" ph="..." />
+            <marker date="1536747368958" expanded="true" signature="1813:1879" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/main/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="167" lean-forward="true" selection-start-line="167" selection-end-line="167" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+            <marker date="1536751950743" expanded="true" signature="348:464" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/comments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+>>>>>>> c96a82e020a63b4da9611f0923968b894cfbeee3
         </state>
       </provider>
     </entry>

@@ -22,13 +22,13 @@ A news aggregator showing news articles from various publishers; with users bein
 
 ## Features
 
-  -[x] Your project must have a user model.
-  -[x] In your models, implement at least 1 one-many relationship.
-  -[x] Your project should have a comment model.
-  -[x] Your project should have a profile page.
-  -[x] Your project should follow the proper folder structure.
-  -[x] Your project should have a functioning authentication system.
-  -[x] Your project should contain migration files for the different model structure.
+  [x] Your project must have a user model.
+  [x] In your models, implement at least 1 one-many relationship.
+  [x] Your project should have a comment model.
+  [x] Your project should have a profile page.
+  [x] Your project should follow the proper folder structure.
+  [x] Your project should have a functioning authentication system.
+  [x] Your project should contain migration files for the different model structure.
 
 ## Installation
 
@@ -72,7 +72,7 @@ This project was created on a debian linux platform but should work on other uni
 
 This web app can be accessed from the following link:
 
-    https://....   
+    https://pitchesznm.herokuapp.com/ 
     
 ## Quick Start
 
