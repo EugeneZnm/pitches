@@ -35,6 +35,7 @@ class UserModelsTest(unittest.TestCase):
         self.assertTrue(self.new__user.verify_email('x418087@gmail.com'))
 
     def save_account(self):
+
         db.session.add(self.new_user)
         db.session.commit()
         self.asserTrue(len(user.id) > 0)
