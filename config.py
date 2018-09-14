@@ -6,7 +6,7 @@ class Config:
     general configuration parent class
 
     """
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://eugene:necromancer@localhost/pit1'
+    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://eugene:necromancer@localhost/final'
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
     #  email configurations
@@ -25,7 +25,7 @@ class ProdConfig(Config):
     """
     production configuration child class
     """
-    SQLALCHEMY_DATABASE_URL = 'postgresql+psycopg2://eugene:necromancer@localhost/pit1'
+    SQLALCHEMY_DATABASE_URL = 'postgresql+psycopg2://eugene:necromancer@localhost/final'
 
     SECRET_KEY = os.environ.get('SECRET_KEY')
     SQLALCHEMY_DATABASE_URI = 'HEROKU_POSTGRESQL_RED_URL'
