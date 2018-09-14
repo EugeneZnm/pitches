@@ -17,7 +17,6 @@ class PitchForm(FlaskForm):
     """
     class to create pitch form
     """
-    title = StringField('Something about your pitch', validators=[Required()])
     pitch = TextAreaField('Pitch Goes Here')
     category = RadioField('Categories', choices = [('Promotional', 'Promotional'),('Product', 'Product'),('Religious', 'Religious'), ('Motivational','Motivational')],validators=[Required()])
     submit = SubmitField('Submit')

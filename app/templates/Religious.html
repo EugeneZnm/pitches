@@ -3,6 +3,7 @@
 <body style="background-color: #9dc0e9";>
 <div class="container">
     <h1 style="font-weight: bold; text-align: center; text-color: white;">RELIGIOUS PITCHES</h1>
+    <button class=" card-body btn btn-danger"><a href="{{url_for('main.pitch')}}" style="color: white;"><h4>CREATE PITCH</h4></a></button>
     {% for pitch in pitches %}
     <div class="card mb-3" style="background-color: #f4a460;">
         <div class="card-body" >

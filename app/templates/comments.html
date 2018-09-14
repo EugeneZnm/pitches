@@ -6,15 +6,15 @@
 <div class="container-fluid">
 
     <div class="row">
-        <div class="col-md-9" style="height: 100px;">
-
-            {{ wtf.quick_form(comment) }}
-            {{simplemde.load}}
+        <div class="col-md-9">
+            <div class="container-fluid" style="width: 500px; background-color: #d0ecd8;">
+                {{ wtf.quick_form(comment) }}
+                {{simplemde.load}}
+            </div>
         </div>
-        {% for comm in comment_is %}
-        <div class="col-md-3">
+        <div class="col-md-3" ">
             {% for comm in comment_is %}
-            <h5  style="background-color: #8aa0de; text-color: white; width:400px; height: 50px;">Comment: {{comm.saying}}</h5>
+            <h5  class="container-fluid" style="background-color: #53f70c; text-color: white; width:300px; height: 50px; margin-right: 3em;">Comment: {{comm.saying}}</h5>
             {% endfor %}
         </div>
     </div>

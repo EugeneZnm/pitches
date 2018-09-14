@@ -2,12 +2,13 @@
 {% import "bootstrap/wtf.html" as wtf %}
 
 {% block content%}
-
-<div class="container-fluid">
-    <div>
+<body style="background-color: #b4eb77:">
+<div class="container-fluid" style="width: 600px; background-color: #d0ecd8;">
+    <div style="background-color: #b4eb77:">
         {{ wtf.quick_form(pitch) }}
         {{simplemde.load}}
     </div>
 </div>
+</body>
 
 {% endblock %}
