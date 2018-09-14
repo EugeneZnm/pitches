@@ -100,6 +100,7 @@ def update_pic(uname):
 
 # display pitches and pitch categories
 @main.route('/pitch', methods=['GET', 'POST'])
+@login_required
 def pitch():
     """
     function to display pitch form

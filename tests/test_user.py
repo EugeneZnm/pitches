@@ -33,3 +33,12 @@ class UserModelsTest(unittest.TestCase):
         :return:
         """
         self.assertTrue(self.new__user.verify_email('x418087@gmail.com'))
+
+    def save_account(self):
+        db.session.add(self.new_user)
+        db.session.commit()
+        self.asserTrue(len(user.id) > 0)
+
+
+if __name__ == '__main__':
+    unittest.main()

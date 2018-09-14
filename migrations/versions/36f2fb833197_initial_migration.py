@@ -1,8 +1,8 @@
-"""drop and add schema
+"""Initial Migration
 
-Revision ID: 773a41702bd6
+Revision ID: 36f2fb833197
 Revises: 
-Create Date: 2018-09-12 16:52:36.590246
+Create Date: 2018-09-14 00:05:08.906148
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '773a41702bd6'
+revision = '36f2fb833197'
 down_revision = None
 branch_labels = None
 depends_on = None
