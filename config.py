@@ -6,6 +6,7 @@ class Config:
     general configuration parent class
 
     """
+    # SQLALCHEMY_DATABASE_URL = 'postgresql+psycopg2://eugene:necromancer@localhost/sema'
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
     #  email configurations
