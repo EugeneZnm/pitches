@@ -25,9 +25,8 @@ class ProdConfig(Config):
     """
     production configuration child class
     """
-    SQLALCHEMY_DATABASE_URL = os.environ.get('HEROKU_POSTGRESQL_BROWN_URL')
+    SQLALCHEMY_DATABASE_URL = os.environ.get('HEROKU_POSTGRESQL_BRONZE_URL')
 
-    SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 class TestConfig(Config):
