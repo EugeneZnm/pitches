@@ -6,8 +6,8 @@ class Config:
     general configuration parent class
 
     """
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://eugene:necromancer@localhost/pit1'
-    SECRET_KEY = os.environ.get('SECRET_KEY')
+    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://eugene:necromancer@localhost/pit1'
+    # SECRET_KEY = os.environ.get('SECRET_KEY')
 
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
@@ -19,6 +19,8 @@ class ProdConfig(Config):
     """
     production configuration child class
     """
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+    SQLALCHEMY_DATABASE_URI = 'HEROKU_POSTGRESQL_PINK_URL'
 
     #  email configurations
     MAIL_SERVER = 'smtp.googlemail.com'
